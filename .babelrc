@@ -1,26 +1,27 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/env",
       {
+        "corejs": 2,
+        "forceAllTransforms": true,
         "modules": false,
         "targets": {
-          "browsers": "> 1%",
-          "uglify": true
+          "browsers": "> 1%"
         },
-        "useBuiltIns": true
+        "useBuiltIns": "usage"
       }
     ],
-    "react"
+    "@babel/react"
   ],
   "plugins": [
-    "syntax-dynamic-import",
-    "transform-object-rest-spread",
     [
-      "transform-class-properties",
+      "@babel/proposal-class-properties",
       {
         "spec": true
       }
-    ]
+    ],
+    "@babel/proposal-object-rest-spread",
+    "@babel/syntax-dynamic-import"
   ]
 }
