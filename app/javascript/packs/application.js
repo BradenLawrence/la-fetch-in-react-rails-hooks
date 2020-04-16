@@ -12,10 +12,12 @@ console.log("Hello World from Webpacker")
 import React from "react"
 import ReactDOM from "react-dom"
 
+import Fortune from "../components/Fortune"
+
 document.addEventListener("DOMContentLoaded", () => {
   let reactElement = document.getElementById("app")
 
   if (reactElement) {
-    ReactDOM.render(<h1>Boo yaa</h1>, reactElement)
+    ReactDOM.render(<Fortune/>, reactElement)
   }
 })
